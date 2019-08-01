@@ -39,7 +39,7 @@ class RecordManager{
                 let layout = {
                     "canvasWidth": 640,
                     "canvasHeight": 480,
-                    "backgroundColor": "#00ff00",
+                    "backgroundColor": "#000000",
                     "regions": []
                 }
                 let recorder = {
@@ -93,8 +93,8 @@ class RecordManager{
             let region = {
                 "x": 0,
                 "y": 0,
-                "width": 320,
-                "height": 240,
+                "width": 480,
+                "height": 640,
                 "zOrder": 1,
                 "alpha": 1,
                 "uid": uid

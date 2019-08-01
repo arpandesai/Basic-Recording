@@ -123,10 +123,10 @@ namespace agora {
                 config.appliteDir = const_cast<char*>(str_appliteDir.c_str());
                 config.cfgFilePath = const_cast<char*>(str_cfgPath.c_str());
                 config.isMixingEnabled = true;
-                config.mixedVideoAudio = agora::linuxsdk::MIXED_AV_DEFAULT;
+                config.mixedVideoAudio = agora::linuxsdk::MIXED_AV_CODEC_V2;
                 config.idleLimitSec = 10;
                 // config.decodeVideo = agora::linuxsdk::VIDEO_FORMAT_MIX_JPG_FILE_TYPE;
-                config.channelProfile = agora::linuxsdk::CHANNEL_PROFILE_LIVE_BROADCASTING;
+                config.channelProfile = agora::linuxsdk::CHANNEL_PROFILE_COMMUNICATION;
                 // config.captureInterval = 1;
                 config.triggerMode = agora::linuxsdk::AUTOMATICALLY_MODE;
                 config.mixResolution = "640,480,15,500";
@@ -149,7 +149,7 @@ namespace agora {
                 out.str("");
                 out << layout.canvasWidth << "," << layout.canvasHeight << ",15," << resolutionValue;
                 string mixResolution = out.str();
-                config.mixResolution = &mixResolution[0u];
+                config.mixResolution = "640,480,15,500";
                 config.audioIndicationInterval = 0;
                 //todo
                 // pRecording->m_agorasdk->updateMixModeSetting(0, 0, true);
